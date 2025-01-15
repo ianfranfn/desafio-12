@@ -9,6 +9,10 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+html {
+    background-color: rgba(66, 212, 50, 0.87);
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -31,7 +35,10 @@
         border: 0;
         font-size: 1.5rem;
         background-color: transparent;
-        cursor: pointer;
+
+        @media screen and (min-width: 576px) {
+            display: none;
+        }
     }
 
 }
@@ -52,19 +59,27 @@
     padding: 2rem;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
 
+    @media screen and (min-width: 576px) {
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        visibility: visible;
+        opacity: 1;
+        padding: 0;
+    }
+    
     &__cerrar {
         display: block;
         border: 0;
         font-size: 1.5rem;
         background-color: transparent;
         cursor: pointer;
-    }
-
-    
-
-    &__cerrar {
         color: #1c1c1c;
-}
+
+        @media screen and (min-width: 576px) {
+            display: none;
+        }
+    }
 
     &__links {
         display: flex;
@@ -72,6 +87,17 @@
         align-items: end;
         border-radius: 10px;
         list-style: none;
+
+        @media screen and (min-width: 576px) {
+            gap: 1rem;
+            font-size: 1.5em;
+            background-color: rgb(161, 255, 150); 
+            padding: 1rem;
+        }
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+        }
     }
 
     &__link-galeria,
@@ -80,8 +106,13 @@
         border-radius: 10px;
         color: rgb(27, 77, 62);
         text-decoration: none;
-        font-size: 0.8em;
-        transition: 0.5s;;
+        font-size: 1em;
+        transition: 0.5s;
+
+        @media screen and (min-width: 576px) {
+           color: #141313;
+           text-decoration: underline;
+        }
     }
 
 }
@@ -89,4 +120,45 @@
 .nav.visible {
     opacity: 1;
     visibility: visible;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    color: #141313;
+
+    &__bienvenida {
+        color: rgb(201, 255, 253);
+        text-shadow: 4px 5px 10px black;
+        font-size: 2.5em;
+    }
+
+    &__parrafo {
+        color:rgb(7, 23, 19);
+        font-size: 1.2em;
+    }
+
+    &__subtitulo {
+        background-color: rgb(161, 255, 150); 
+        font-size: 1.2em;
+        border-radius: 10px;
+        padding: 0.5rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        border: 3px solid #141313;
+        border-left: transparent;
+        border-right: transparent;
+    }
+}
+
+.footer {
+    background-color: rgb(48, 113, 93);
+    text-align: center;
+    
+    &__parrafo {
+        color: #dfdfdf;
+    }
 }
