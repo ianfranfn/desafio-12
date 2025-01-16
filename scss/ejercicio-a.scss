@@ -22,11 +22,22 @@ html {
     padding: 2rem;
     max-width: 100vw;
 
+    @media screen and (min-width: 1200px) {
+        width: 80vw;
+        margin-left: 20vw;
+        
+    }
+
     &__titulo {
         display: flex;
         justify-content: center;
         color: rgb(103, 254, 86);
         text-shadow: 4px 5px 10px black;
+
+        @media screen and (min-width: 992px) {
+            font-size: 3.5em;
+
+        }
     }
 
     &__menu {
@@ -41,6 +52,39 @@ html {
         }
     }
 
+}
+
+.columna {
+    display: none;
+    opacity: 0;
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        flex-direction: column;
+        align-items: end;
+        justify-content: space-around;
+        opacity: 1;
+        gap: 1rem;
+        font-size: 2em;
+        background-color: rgb(48, 113, 93);
+     
+    }
+    
+    &__contenido {
+        @media screen and (min-width: 1200px) {
+            flex-direction: column;
+            align-items: end;
+            border-radius: 10px;
+            list-style: none;
+            color: #eee;
+
+            
+        }
+    }
 }
 
 
@@ -67,7 +111,7 @@ html {
         opacity: 1;
         padding: 0;
     }
-    
+
     &__cerrar {
         display: block;
         border: 0;
@@ -91,12 +135,16 @@ html {
         @media screen and (min-width: 576px) {
             gap: 1rem;
             font-size: 1.5em;
-            background-color: rgb(161, 255, 150); 
+            background-color: rgb(161, 255, 150);
             padding: 1rem;
         }
 
         @media screen and (min-width: 768px) {
             flex-direction: row;
+        }
+
+        @media screen and (min-width: 1200px) {
+            background-color: rgb(48, 113, 93);
         }
     }
 
@@ -110,8 +158,26 @@ html {
         transition: 0.5s;
 
         @media screen and (min-width: 576px) {
-           color: #141313;
-           text-decoration: underline;
+            color: #141313;
+            text-decoration: underline;
+        }
+
+        @media screen and (min-width: 992px) {
+            font-size: 1.2em;
+
+        }
+
+        @media screen and (min-width: 1200px) {
+           font-size: 1.1em;
+           padding: 0.2rem;
+           text-decoration: none;
+           color: #eee;
+           cursor: pointer;
+
+           &:hover {
+               background-color: rgb(161, 255, 150);
+               color: #141313;
+           }
         }
     }
 
@@ -130,19 +196,35 @@ html {
     padding: 1rem;
     color: #141313;
 
+    @media screen and (min-width: 1200px) {
+        width: 80vw;
+        margin-left: 20vw;
+        
+    }
+
     &__bienvenida {
         color: rgb(201, 255, 253);
         text-shadow: 4px 5px 10px black;
         font-size: 2.5em;
+
+        @media screen and (min-width: 992px) {
+            font-size: 4em;
+
+        }
     }
 
     &__parrafo {
-        color:rgb(7, 23, 19);
+        color: rgb(7, 23, 19);
         font-size: 1.2em;
+
+        @media screen and (min-width: 992px) {
+            font-size: 2em;
+            padding: 1rem;
+        }
     }
 
     &__subtitulo {
-        background-color: rgb(161, 255, 150); 
+        background-color: rgb(161, 255, 150);
         font-size: 1.2em;
         border-radius: 10px;
         padding: 0.5rem;
@@ -151,14 +233,26 @@ html {
         border: 3px solid #141313;
         border-left: transparent;
         border-right: transparent;
+
+        @media screen and (min-width: 992px) {
+            font-size: 3em;
+            border: 6px solid #141313;
+            border-left: transparent;
+            border-right: transparent;
+        }
     }
 }
 
 .footer {
     background-color: rgb(48, 113, 93);
     text-align: center;
-    
+
     &__parrafo {
         color: #dfdfdf;
+
+        @media screen and (min-width: 992px) {
+            font-size: 1.5em;
+
+        }
     }
 }
