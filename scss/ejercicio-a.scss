@@ -20,12 +20,16 @@ html {
     background-color: rgb(48, 113, 93);
     font-size: 1em;
     padding: 2rem;
-    max-width: 100vw;
+    max-width: 100%;
 
     @media screen and (min-width: 1200px) {
-        width: 80vw;
+        width: 80%;
         margin-left: 20vw;
-        
+
+    }
+
+    @media screen and (min-width: 1400px){
+        padding: 1rem;
     }
 
     &__titulo {
@@ -36,6 +40,10 @@ html {
 
         @media screen and (min-width: 992px) {
             font-size: 3.5em;
+        }
+
+        @media screen and (min-width: 1400px) {
+            font-size: 4.5em;
 
         }
     }
@@ -60,29 +68,32 @@ html {
 
     @media screen and (min-width: 1200px) {
         display: flex;
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: fixed;
         bottom: 0;
+        left: 0;
         flex-direction: column;
-        align-items: end;
+        align-items: center;
         justify-content: space-around;
         opacity: 1;
         gap: 1rem;
-        font-size: 2em;
+        font-size: 1.7em;
         background-color: rgb(48, 113, 93);
-     
+        width: 21vw;
+        min-height: 100vh;
+
     }
-    
+
     &__contenido {
         @media screen and (min-width: 1200px) {
-            flex-direction: column;
-            align-items: end;
+            padding: 1rem;
+            background-color: rgb(201, 255, 253);
             border-radius: 10px;
             list-style: none;
-            color: #eee;
+            color: #141313;
 
-            
+            &:hover {
+                background-color: rgb(161, 255, 150);
+            }
         }
     }
 }
@@ -168,16 +179,21 @@ html {
         }
 
         @media screen and (min-width: 1200px) {
-           font-size: 1.1em;
-           padding: 0.2rem;
-           text-decoration: none;
-           color: #eee;
-           cursor: pointer;
+            font-size: 1.1em;
+            padding: 0.2rem;
+            text-decoration: none;
+            color: #eee;
+            cursor: pointer;
 
-           &:hover {
-               background-color: rgb(161, 255, 150);
-               color: #141313;
-           }
+            &:hover {
+                background-color: rgb(161, 255, 150);
+                color: #141313;
+            }
+        }
+
+        @media screen and (min-width: 1400px) {
+            font-size: 1.2em;
+
         }
     }
 
@@ -199,7 +215,7 @@ html {
     @media screen and (min-width: 1200px) {
         width: 80vw;
         margin-left: 20vw;
-        
+
     }
 
     &__bienvenida {
@@ -209,6 +225,10 @@ html {
 
         @media screen and (min-width: 992px) {
             font-size: 4em;
+        }
+
+        @media screen and (min-width: 1400px) {
+            font-size: 5em;
 
         }
     }
@@ -221,6 +241,8 @@ html {
             font-size: 2em;
             padding: 1rem;
         }
+
+        @media screen and (min-width: 1400px) {}
     }
 
     &__subtitulo {
@@ -246,6 +268,11 @@ html {
 .footer {
     background-color: rgb(48, 113, 93);
     text-align: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 
     &__parrafo {
         color: #dfdfdf;
