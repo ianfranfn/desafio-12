@@ -1,0 +1,25 @@
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    &__imagenes {
+        width: 70%;
+        padding: 0.5rem;
+        margin-bottom: 15px;
+        background-color: rgb(48, 113, 93);
+        border-radius: 15px;
+    }
+}
+
+.link-inicio {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(48, 113, 93);
+    padding: 0.5rem;
+    border-radius: 15px;
+    margin-top: 12px;
+}
+
