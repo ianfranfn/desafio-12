@@ -5,16 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio-C</title>
 </head>
-<body>
-    <form action="">
-        <label for="name"> Nombre:
-            <input type="text">
-        </label>
-        <label for="email"> Apellido:
-            <input type="email">
-        </label>
+<body id="formulario">
+    <form method="get" class="formulario">
+        <div class="formulario__etiqueta-contenedor">
+            <label for="nombre" class="formulario__etiqueta-nombre"> Nombre:
+                <input type="text" name="nombre" id="nombre" placeholder="a" class="formulario__input">
+            </label>
+        </div>
+        <div class="formulario__etiqueta-contenedor" id="mensaje">
+            <label for="mjs" class="formulario__etiqueta-mensaje"> Mensaje:
+                <input type="text" name="mensaje" id="mjs" placeholder="a" class="formulario__input">
+            </label>
+        </div>
+        <div class="formulario__etiqueta-contenedor" id="correo">
+            <label for="email" class="formulario__etiqueta-correo"> Correo electrónico:
+                <input type="email" name="email" id="email" class="formulario__input" placeholder="a">
+            </label>
+        </div>
+        <div class="formulario__boton">
+            <input type="submit" id="boton">
+        </div>
     </form>
 
     <script type="module" src="/main.js"></script>
 </body>
+
 </html>
